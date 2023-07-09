@@ -1,6 +1,7 @@
 from setuptools import find_packages, setup
 from typing import List
 
+# typing.List allows you to specify the expected type of elements in a list
 def get_requirements(file_path:str)->List[str]:
     """
     This function will return the list of requirements
