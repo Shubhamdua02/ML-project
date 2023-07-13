@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 
 from src.exception import customException
 from src.logger import logging
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 
 """
 The @dataclass decorator automatically generates special methods like '__init__', '__repr__', and '__eq__'
@@ -52,9 +54,12 @@ class DataIngestion:
         except Exception as e:
             raise customException(e, sys)
 
-# if __name__=='__main__':
-#     temp = DataIngestion()
-#     temp.initiate_data_ingestion()
+if __name__=='__main__':
+    temp = DataIngestion()
+    train_data, test_data = temp.initiate_data_ingestion()
+
+    transformer = DataTransformation()
+    transformer.initiate_data_transformation(train_path=train_data, test_path=test_data)
 
 
 
