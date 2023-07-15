@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from src.exception import customException
 from src.logger import logging
 from src.utils import save_object, evaluate_model, save_model_score
+from src.components.params import get_params
 
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
@@ -52,7 +53,7 @@ class ModelTrainer:
 
             # model_report is a dictionary that will return the names and R2 scores of all the models
             model_report = {}
-            model_report = evaluate_model(x_train, x_test, y_train, y_test, models=models)
+            model_report = evaluate_model(x_train, x_test, y_train, y_test, models=models, parameters=get_params())
             logging.info('Models trained')
             
             save_model_score(

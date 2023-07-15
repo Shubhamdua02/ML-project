@@ -5,6 +5,7 @@ import os
 import sys
 import json
 from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
 
 from src.exception import customException
 from src.logger import logging
@@ -51,17 +52,24 @@ def save_model_score(model_score:dict, file_path):
     except Exception as e:
         pass
     
-def evaluate_model(x_train, x_test, y_train, y_test, models:dict):
+def evaluate_model(x_train, x_test, y_train, y_test, models:dict, parameters:dict):
     """
     x_train : training dataset with list of input features
     x_test : training dataset with target variable(s)
     y_train : test dataset with list of input features
     y_test : test dataset with target variable(s)
     models : list of models to evaluate, in the form of a dictionary (key: name of model, value: the model)
+    parameters : set of parameters for different models in the form of a dictionary
     """
     try:
         report = {}
         for model_name,model in models.items():
+            params = parameters[model_name]
+
+            gs = GridSearchCV(model, params, cv=3)
+            gs.fit(x_train, y_train)
+
+            model.set_params(**gs.best_params_)
             model.fit(x_train, y_train)
             y_pred = model.predict(x_test)
             model_score = r2_score(y_test, y_pred)
