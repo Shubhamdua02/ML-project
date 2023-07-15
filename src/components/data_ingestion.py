@@ -8,6 +8,8 @@ from src.exception import customException
 from src.logger import logging
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 """
 The @dataclass decorator automatically generates special methods like '__init__', '__repr__', and '__eq__'
@@ -59,7 +61,10 @@ if __name__=='__main__':
     train_data, test_data = temp.initiate_data_ingestion()
 
     transformer = DataTransformation()
-    transformer.initiate_data_transformation(train_path=train_data, test_path=test_data)
+    train_array, test_array, _ = transformer.initiate_data_transformation(train_path=train_data, test_path=test_data)
+
+    trainer = ModelTrainer()
+    trainer.initiate_model_trainer(train_array=train_array, test_array=test_array)
 
 
 
