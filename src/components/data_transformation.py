@@ -61,7 +61,7 @@ class DataTransformation:
 
             preprocesor_obj = self.transform_data_obj()
 
-            target_column = "math score"
+            target_column = "math_score"
             numeric_columns,_ = get_columns()
 
             x_train = df_train.drop(columns=[target_column], axis=1)
