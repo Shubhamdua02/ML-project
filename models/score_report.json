@@ -1,1 +1,1 @@
-{"Random Forest": 0.8530916759808623, "Decision Tree": 0.753594171737794, "Gradient Boosting": 0.8810682148721112, "Linear Regression": 0.8804332983749565, "XGBRegressor": 0.8628772402712002, "CatBoosting Regressor": 0.8566301224032382, "AdaBoost Regressor": 0.848335361262361}
+{"Random Forest": 0.8519847959042439, "Decision Tree": 0.7473477264582984, "Gradient Boosting": 0.8742362811282763, "Linear Regression": 0.8804332983749565, "XGBRegressor": 0.8628772402712002, "CatBoosting Regressor": 0.8566301224032382, "AdaBoost Regressor": 0.849714677691368}

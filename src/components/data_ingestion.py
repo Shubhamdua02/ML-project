@@ -31,6 +31,10 @@ class DataIngestion:
         try:
             df = pd.read_csv('data\\stud.csv')
             logging.info('Read in data')
+            df.rename(columns={"race/ethnicity":"race_ethnicity", "parental level of education":"parental_level_of_education", 
+                   "test preparation course":"test_preparation_course", "reading score":"reading_score", 
+                   "writing score":"writing_score", "math score":"math_score"}, inplace=True)
+            logging.info('Renaming DataFrame columns')
             """
             Extract the parent directory path using 'os.path.dirname' from 'self.ingestion_config.train_data_path'
             Then create the directory structure. 
