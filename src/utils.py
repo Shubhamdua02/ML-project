@@ -12,7 +12,7 @@ from src.logger import logging
 
 def get_columns():
     try:
-        df = pd.read_csv('data\\stud.csv')
+        df = pd.read_csv('artifacts\\data.csv')
         numeric_columns = []
         categorical_columns = []
         
@@ -21,8 +21,8 @@ def get_columns():
                 categorical_columns.append(column)
             else:
                 numeric_columns.append(column)
-        # math score" will be our output / target variable
-        numeric_columns.remove('math score')
+        # math_score" will be our output / target variable
+        numeric_columns.remove('math_score')
         return (numeric_columns, categorical_columns)
     
     except Exception as e:
@@ -37,6 +37,13 @@ def save_object(file_path, obj):
 
     except Exception as e:
         raise customException(e, sys)
+    
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise customException(e,sys)
 
 def save_model_score(model_score:dict, file_path):
     """
