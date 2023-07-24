@@ -48,9 +48,9 @@ pip install -r requirements.txt
 cd ML-project
 python src\components\data_ingestion.py
 ```
-- Run app.py
+- Run application.py
 ```
-python app.py
+python application.py
 ```
 - Go to your web browser and type in http://127.0.0.1:5000/predict_data
 - Fill up the input fields, and get the predicted Math Score
