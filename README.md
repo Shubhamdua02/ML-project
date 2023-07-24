@@ -56,4 +56,4 @@ python app.py
 - Fill up the input fields, and get the predicted Math Score
 
 # Sample Output
-![Sample output](https://github.com/Shubhamdua02/ML-project/blob/main/Images/output.png)
+[![Sample output](https://github.com/Shubhamdua02/ML-project/blob/main/Images/output.png)](https://github.com/Shubhamdua02/ML-project/blob/main/Images/output.png)
