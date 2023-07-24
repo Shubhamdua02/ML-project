@@ -16,7 +16,7 @@
 
 </div>
 
-## Life Cycle of Machine Learning Project
+# Life Cycle of Machine Learning Project
 * Understanding the Problem Statement
 * Data Collection
 * Data Checks to perform
@@ -25,13 +25,13 @@
 * Model Training
 * Choose the best model
 
-## Problem Statement
-This project understands how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch and Test preparation course.
+# Problem Statement
+This project understands how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch, and Test preparation course.
 
-## Data Collection 
+# Data Collection 
 The [dataset](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) is publically available on Kaggle and consists of 8 columns and 1000 rows.
 
-## Installation Procedure
+# Installation Procedure
 - Create a virtual environment (this step is optional)
 - Install Python 3.8 or higher (This project was run with Python 3.8)
 - Clone the repository:
@@ -54,3 +54,6 @@ python app.py
 ```
 - Go to your web browser and type in http://127.0.0.1:5000/predict_data
 - Fill up the input fields, and get the predicted Math Score
+
+# Sample Output
+![Sample output](https://github.com/Shubhamdua02/ML-project/blob/main/Images/output.png)
