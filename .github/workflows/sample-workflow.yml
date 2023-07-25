@@ -1,6 +1,6 @@
 # Sample build file
 
-name: Build the repo
+name: ML-project
 
 on:
   push:
