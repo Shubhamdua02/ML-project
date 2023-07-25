@@ -8,6 +8,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/license/mit/)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/shubhamdua02/ML-project)](https://img.shields.io/github/repo-size/shubhamdua02/ML-project)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/Shubhamdua02/ML-project/actions/workflows/sample-workflow.yml)
+
 [![made-with-python](https://img.shields.io/badge/Made_with-Python-blue)](https://www.python.org/)
 [![Python 3.8](https://img.shields.io/badge/Python-3.8-blue)](https://www.python.org/)
 [![GitHub contributors](https://img.shields.io/github/contributors/shubhamdua02/ML-project)](https://github.com/shubhamdua02/ML-project/graphs/contributors)
